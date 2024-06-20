@@ -1,14 +1,6 @@
 /* NavbarStyles.css */
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
+.buyer {
     width: 100%;
     height: 80px;
     display: flex;
@@ -19,12 +11,12 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: aquamarine;
-    color: #0f0e0e;
+    background-color: rgb(23, 24, 23);
+    color: #f1e7e7;
     transition: background-color 0.3s ease;
 }
  
-.navbar-bg {
+.buyer-bg {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -33,21 +25,21 @@ body, html {
     font-weight: bold;
 }
 
-.nav-menu {
+.buy-menu {
     display: flex;
     list-style: none;
 }
 
-.nav-menu li {
+.buy-menu li {
     padding: 0 1rem;
 }
 
-.nav-icons {
+.buy-icons {
     display: flex;
     align-items: center;
 }
 
-.nav-icons .icon {
+.buy-icons .icon {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
@@ -61,17 +53,5 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.hamburger {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
 }
 
