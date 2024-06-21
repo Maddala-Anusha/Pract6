@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BiSearch } from 'react-icons/bi';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaPinterest } from 'react-icons/fa';
@@ -22,6 +21,7 @@ function Navbar() {
         <li>Home</li>
         <li>About Us</li>
         <li>Contact Us</li>
+        <li>Cart</li>
       </ul>
       <div className="nav-icons">
         
