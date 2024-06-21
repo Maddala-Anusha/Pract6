@@ -1,88 +1,42 @@
 
-import React from 'react';
-import './LoginStyles.css'
-import i1 from '../../assets/i1.png';
-import { useState } from 'react';
-import {Box,Button,TextField,styled,Typography } from '@mui/material';
+import React, { useState } from 'react';
+import Navbar from '../navbar/Navbar';
+import './LoginStyles.css';
+import { Link } from 'react-router-dom';
 
+const Login= () => {
+  const [isChecked, setIsChecked] = useState(false);
 
-const Component=styled(Box)`
-    width: 400px;
-    margin:auto;
-    box-shadow:10px 5px 3px 2px rgb(0 0 0/0.6)`;
-const Image=styled('img')
-({
-    width:300,
-    margin:'auto',
-    display:'flex',padding:'80px 0 0'
-});
-const Wrapper=styled(Box)`
-padding:25px 35px;
-display:flex;
-flex:1;
-flex-direction: column;
-&>div,&>button,&>p{
-margin-top:20px;}
-`;
-const LoginButton=styled(Button)
-`text-transform:none;
-background:#fb641b;
-height:48px;
-border-radius:2px;
-box-shadow:0 2px 4px 0 rgv(0 0 0/20%);
-`;
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
 
-const SignupButton=styled(Button)
-`text-transform:none;
-background:#fb641b;
-color:#fff;
-height:48px;
-border-radius:2px;
-box-shadow:0 2px 4px 0 rgv(0 0 0/20%);
-`;
+  return (
+    <div>
+      <Navbar />
+    <div className="mains">
+      <input 
+        type="checkbox" 
+        id="chke" 
+        aria-hidden="true" 
+        checked={isChecked} 
+        onChange={handleCheckboxChange}
+      />
+      
+      <div className={`signups ${isChecked ? 'inactives' : ''}`}>
+        <form>
+          <label htmlFor="chke" aria-hidden="true">Login</label>
+          <input type="text" name="txt" placeholder="User name" id='user1' required />
+          <input type="email" name="email" placeholder="Email" id='email1' required />
+          
+          <input type="password" name="pswd" placeholder="Password" id='pswd1' required />
+          <Link to="/Buyer"><button id='log3' type='submit'>Login</button></Link>
+         
+        </form>
+      </div>
+    </div>
+    </div>
+  );
+};
 
-
-const Text=styled(Typography)
-`
-    color:#878787;
-    font-size:12px;
-`;
-
-
-const  Login =()=>{
-  
-     const [account,toggleAccount]=useState('login');
-    
-    const toggleSignup=()=>{
-       account==='signup'? toggleAccount('login'):toggleAccount('signup');
-    }
-  
-    return(
-        <Component>
-          <Box> 
-          <Image src={i1}  alt="login"/> 
-            {
-                account==='login'?
-            
-            <Wrapper>                 
-                    <TextField variant="standard" label="Enter username"/>
-                    <TextField variant="standard" label="Enter password"/>
-                  <Button variant="contained">LOGIN</Button>
-                  <Button  onClick={()=>toggleSignup()}>CREATE AN ACCOUNT</Button>
-            </Wrapper>:
-            <Wrapper>                 
-                <TextField variant="standard" label="Enter Name"/>
-                  <TextField variant="standard" label="Enter Username"/>
-                  <TextField variant="standard" label="Enter Password"/>
-
-                  <SignupButton variant="contained">SignUp</SignupButton>
-                  <LoginButton  onClick={()=>toggleSignup()}>Already have AN ACCOUNT</LoginButton>
-            </Wrapper>
-    }
-            </Box>
-
-              </Component>
-    
-    )
-}
 export default Login;

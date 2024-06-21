@@ -1,8 +1,7 @@
 /* LoginSignUp.css */
 
 
-.mains {
- 
+.main {
   width: 350px;
   height: 500px;
   background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
@@ -13,11 +12,11 @@
   position: relative;
 }
 
-#chke {
+#chk {
   display: none;
 }
 
-.signups,
+.signup,
 .login {
   position: absolute;
   width: 100%;
@@ -25,9 +24,9 @@
   transition: transform 0.8s ease-in-out;
 }
 
-.signups label,
+.signup label,
 .login label {
-  color: #0e0b0b;
+  color: #110f0f;
   font-size: 2.3em;
   justify-content: center;
   display: flex;
@@ -37,11 +36,11 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.signups input,
+.signup input,
 .login input {
   width: 60%;
   height: 10px;
-  background: #e0dede;
+  background: #f8f7f7;
   justify-content: center;
   display: flex;
   margin: 20px auto;
@@ -51,7 +50,7 @@
   border-radius: 5px;
 }
 
-.signups button,
+.signup button,
 .login button {
   width: 60%;
   height: 40px;
@@ -70,7 +69,7 @@
   cursor: pointer;
 }
 
-.signups button:hover,
+.signup button:hover,
 .login button:hover {
   background: #6d44b8;
 }
@@ -86,18 +85,18 @@
   transform: scale(0.6);
 }
 
-#chke:checked ~ .login {
+#chk:checked ~ .login {
   transform: translateY(-500px);
 }
 
-#chke:checked ~ .login label {
+#chk:checked ~ .login label {
   transform: scale(1);
 }
 
-#chke:checked ~ .signups label {
+#chk:checked ~ .signup label {
   transform: scale(0.6);
 }
 
-.inactives {
+.inactive {
   display: none;
 }
